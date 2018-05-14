@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="TelerikXamarinApp3.Portable.StartPage">
+  <Label Text="You are ready to use all controls from UI for XamarinForms suite." HorizontalOptions="Center" VerticalOptions="Center"/>
+    <telerikGauges:RadRadialGauge x:Name="gauge">
+        <telerikGauges:RadRadialGauge.Axis>
+            <telerikGauges:GaugeLinearAxis Maximum="200"
+                                       Minimum="0"
+                                       Step="25" />
+        </telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:RadRadialGauge.Indicators>
+            <telerikGauges:GaugeNeedleIndicator Offset="30" Value="60" />
+            <telerikGauges:GaugeShapeIndicator Value="80" />
+        </telerikGauges:RadRadialGauge.Indicators>
+        <telerikGauges:RadRadialGauge.Ranges>
+            <telerikGauges:GaugeRangesDefinition>
+                <telerikGauges:GaugeRange Color="Green"
+                                      From="0"
+                                      To="150" />
+                <telerikGauges:GaugeGradientRange From="150" To="200">
+                    <telerikCommon:RadGradientStop Offset="150" Color="Yellow" />
+                    <telerikCommon:RadGradientStop Offset="200" Color="Red" />
+                </telerikGauges:GaugeGradientRange>
+            </telerikGauges:GaugeRangesDefinition>
+        </telerikGauges:RadRadialGauge.Ranges>
+    </telerikGauges:RadRadialGauge>
+</ContentPage>
